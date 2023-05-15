@@ -1,27 +1,25 @@
 import React from 'react';
-import {SafeAreaView, ScrollView, StatusBar} from 'react-native';
+import {View} from 'react-native';
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
-import {UseTransitionExampleScreen} from './src/screens/UseTransitionExample';
+import {NavigationContainer} from '@react-navigation/native';
+
+import {
+  RootStackNavigator,
+  rootStackRef,
+} from './src/navigators/RootStackNavigator';
 
 function App(): JSX.Element {
-  const backgroundStyle = {
-    backgroundColor: Colors.lighter,
-  };
-
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle="light-content"
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <UseTransitionExampleScreen />
-      </ScrollView>
-    </SafeAreaView>
+    <View style={styles}>
+      <NavigationContainer ref={rootStackRef}>
+        <RootStackNavigator />
+      </NavigationContainer>
+    </View>
   );
 }
+
+const styles = {
+  flex: 1,
+} as const;
 
 export default App;

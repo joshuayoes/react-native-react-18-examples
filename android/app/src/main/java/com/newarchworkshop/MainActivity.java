@@ -29,4 +29,12 @@ public class MainActivity extends ReactActivity {
         // If you opted-in for the New Architecture, we enable the Fabric Renderer.
         DefaultNewArchitectureEntryPoint.getFabricEnabled());
   }
+
+  /**
+   * https://reactnavigation.org/docs/getting-started#installing-dependencies-into-a-bare-react-native-project
+   */
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+      super.onCreate(null);
+  }
 }

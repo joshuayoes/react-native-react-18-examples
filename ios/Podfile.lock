@@ -666,6 +666,29 @@ PODS:
   - React-jsinspector (0.72.0-rc.3)
   - React-logger (0.72.0-rc.3):
     - glog
+  - react-native-safe-area-context (4.5.2):
+    - RCT-Folly
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Core
+    - react-native-safe-area-context/common (= 4.5.2)
+    - react-native-safe-area-context/fabric (= 4.5.2)
+    - ReactCommon/turbomodule/core
+  - react-native-safe-area-context/common (4.5.2):
+    - RCT-Folly
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Core
+    - ReactCommon/turbomodule/core
+  - react-native-safe-area-context/fabric (4.5.2):
+    - RCT-Folly
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Codegen
+    - React-Core
+    - react-native-safe-area-context/common
+    - React-RCTFabric
+    - ReactCommon/turbomodule/core
   - React-NativeModulesApple (0.72.0-rc.3):
     - hermes-engine
     - React-callinvoker
@@ -766,6 +789,23 @@ PODS:
     - React-jsi (= 0.72.0-rc.3)
     - React-logger (= 0.72.0-rc.3)
     - React-perflogger (= 0.72.0-rc.3)
+  - RNScreens (3.20.0):
+    - RCT-Folly
+    - RCTRequired
+    - RCTTypeSafety
+    - React
+    - React-Codegen
+    - React-RCTFabric
+    - ReactCommon/turbomodule/core
+    - RNScreens/common (= 3.20.0)
+  - RNScreens/common (3.20.0):
+    - RCT-Folly
+    - RCTRequired
+    - RCTTypeSafety
+    - React
+    - React-Codegen
+    - React-RCTFabric
+    - ReactCommon/turbomodule/core
   - SocketRocket (0.6.0)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
@@ -819,6 +859,7 @@ DEPENDENCIES:
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
+  - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - React-NativeModulesApple (from `../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
@@ -835,6 +876,7 @@ DEPENDENCIES:
   - React-rncore (from `../node_modules/react-native/ReactCommon`)
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - RNScreens (from `../node_modules/react-native-screens`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -900,6 +942,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
   React-logger:
     :path: "../node_modules/react-native/ReactCommon/logger"
+  react-native-safe-area-context:
+    :path: "../node_modules/react-native-safe-area-context"
   React-NativeModulesApple:
     :path: "../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios"
   React-perflogger:
@@ -932,6 +976,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/runtimeexecutor"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  RNScreens:
+    :path: "../node_modules/react-native-screens"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -970,6 +1016,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 1f2ea220f94999e966d5f106f734d4fd384f21a7
   React-jsinspector: 7edbc8f9e4a52adc90a2b4904bcfb084b0fd610b
   React-logger: 8a71e32605ceebf504728b93c2d32dd3e0cd48e7
+  react-native-safe-area-context: 8888b05e4908d768745251fcbb767a521f9522d3
   React-NativeModulesApple: daff132eb7566cf37d989dcfede7e9aa596ee8e7
   React-perflogger: 693189a8460e7f056462a8ee2f5234f92d9fafbc
   React-RCTActionSheet: e20348de098d1a09226bac5f7ced5ba50074cafc
@@ -986,6 +1033,7 @@ SPEC CHECKSUMS:
   React-rncore: 038f918d42b3f8804c790f4a1e53b57ccb0de225
   React-runtimeexecutor: d6f826a648b18fd6dc307dae452f1e77f217e283
   ReactCommon: 849e916dc528c99018c12f4e5c5ef38dc2681bbc
+  RNScreens: 4666ca0a74ee229b2332c5d22d2a8b81ba9202be
   SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
   Yoga: 6d37a6867a5577ebcd55eb9f4bb4d0a430ae0039
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
