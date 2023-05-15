@@ -16,6 +16,16 @@ export type RootStackParamList = {
   TableOfContentsScreen: undefined;
 };
 
+declare global {
+  namespace ReactNavigation {
+    interface RootParamList extends RootStackParamList {}
+  }
+}
+
+export type RootStackProps<
+  Screen extends keyof RootStackParamList = keyof RootStackParamList,
+> = NativeStackScreenProps<RootStackParamList, Screen>;
+
 export const RootStackScreens = {
   UseTransitionExample: {
     name: 'UseTransitionExample',
@@ -29,15 +39,11 @@ export const RootStackScreens = {
     name: 'TableOfContentsScreen',
     component: TableOfContentsScreen,
   },
-} as Record<
+} satisfies Record<
   keyof RootStackParamList,
   {
     name: keyof RootStackParamList;
-    component:
-      | React.ComponentType
-      | React.ComponentType<
-          NativeStackScreenProps<RootStackParamList, keyof RootStackParamList>
-        >;
+    component: React.FC<any>;
   }
 >;
 

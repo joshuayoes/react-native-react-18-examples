@@ -1,16 +1,10 @@
 import React from 'react';
 import {Button, View, ViewStyle} from 'react-native';
-import type {NativeStackScreenProps} from '@react-navigation/native-stack';
 
-import {
-  RootStackParamList,
-  RootStackScreens,
-} from '../navigators/RootStackNavigator';
+import type {RootStackProps} from '../navigators/RootStackNavigator';
+import {RootStackScreens} from '../navigators/RootStackNavigator';
 
-type Props = NativeStackScreenProps<
-  RootStackParamList,
-  'TableOfContentsScreen'
->;
+type Props = RootStackProps<'TableOfContentsScreen'>;
 
 export function TableOfContentsScreen(props: Props) {
   const screens = Object.values(RootStackScreens).filter(
