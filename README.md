@@ -15,7 +15,7 @@ This repo is currently under construction, here is the status of the examples th
 | Automatic batching     | ✅     | https://react.dev/blog/2022/03/08/react-18-upgrade-guide#automatic-batching |
 | Strict Mode            | 🚧     | https://react.dev/reference/react/StrictMode                                |
 | `useId`                | 🚧     | https://react.dev/reference/react/useId                                     |
-| `useSyncExternalStore` | 🚧     | https://react.dev/reference/react/useSyncExternalStore                      |
+| `useSyncExternalStore` | ✅     | https://react.dev/reference/react/useSyncExternalStore                      |
 | `startTransition`      | 🚧     | https://react.dev/reference/react/startTransition                           |
 | `useTransition`        | ✅     | https://react.dev/reference/react/useTransition                             |
 | `useDeferredValue`     | ✅     | https://react.dev/reference/react/useDeferredValue                          |
