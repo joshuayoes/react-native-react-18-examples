@@ -24,6 +24,12 @@ This repo is currently under construction, here is the status of the examples th
 | 🚧    | Not started  |
 | 🚫    | Not possible |
 
+## React DevTools
+
+In order to explore some of the new features like concurrent rendering, use `yarn devtools` to open the React DevTools.
+
+Switch to the `Profiler` tab, record your interactions and then replay them to see how the renders are scheduled. [Read more at the React blog](https://legacy.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html#reading-performance-data).
+
 ## Installation
 
 ```bash

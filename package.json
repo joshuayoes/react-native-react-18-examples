@@ -14,7 +14,8 @@
     "format:check": "yarn format --check",
     "test": "jest",
     "postinstall": "RCT_NEW_ARCH_ENABLED=1 npx pod-install",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "devtools": "npx react-devtools"
   },
   "dependencies": {
     "@react-navigation/native": "^6.1.6",
