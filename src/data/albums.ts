@@ -2,7 +2,7 @@
 // the framework that you use together with Suspense.
 // Normally, the caching logic would be inside a framework.
 
-interface Album {
+export interface Album {
   id: number;
   title: string;
   year: number;
@@ -20,84 +20,87 @@ export async function fetchData(url: string) {
 async function getData(url: string) {
   if (url.startsWith('/search?q=')) {
     return await getSearchResults(url.slice('/search?q='.length));
-  } else {
-    throw Error('Not implemented');
   }
+  if (url === '/the-beatles/albums') {
+    return await getAlbums();
+  }
+
+  throw Error('Not implemented');
 }
 
-async function getSearchResults(query: string) {
+export const allAlbums: Album[] = [
+  {
+    id: 13,
+    title: 'Let It Be',
+    year: 1970,
+  },
+  {
+    id: 12,
+    title: 'Abbey Road',
+    year: 1969,
+  },
+  {
+    id: 11,
+    title: 'Yellow Submarine',
+    year: 1969,
+  },
+  {
+    id: 10,
+    title: 'The Beatles',
+    year: 1968,
+  },
+  {
+    id: 9,
+    title: 'Magical Mystery Tour',
+    year: 1967,
+  },
+  {
+    id: 8,
+    title: "Sgt. Pepper's Lonely Hearts Club Band",
+    year: 1967,
+  },
+  {
+    id: 7,
+    title: 'Revolver',
+    year: 1966,
+  },
+  {
+    id: 6,
+    title: 'Rubber Soul',
+    year: 1965,
+  },
+  {
+    id: 5,
+    title: 'Help!',
+    year: 1965,
+  },
+  {
+    id: 4,
+    title: 'Beatles For Sale',
+    year: 1964,
+  },
+  {
+    id: 3,
+    title: "A Hard Day's Night",
+    year: 1964,
+  },
+  {
+    id: 2,
+    title: 'With The Beatles',
+    year: 1963,
+  },
+  {
+    id: 1,
+    title: 'Please Please Me',
+    year: 1963,
+  },
+];
+
+async function getSearchResults(query = '') {
   // Add a fake delay to make waiting noticeable.
   await new Promise(resolve => {
     setTimeout(resolve, 500);
   });
-
-  const allAlbums: Album[] = [
-    {
-      id: 13,
-      title: 'Let It Be',
-      year: 1970,
-    },
-    {
-      id: 12,
-      title: 'Abbey Road',
-      year: 1969,
-    },
-    {
-      id: 11,
-      title: 'Yellow Submarine',
-      year: 1969,
-    },
-    {
-      id: 10,
-      title: 'The Beatles',
-      year: 1968,
-    },
-    {
-      id: 9,
-      title: 'Magical Mystery Tour',
-      year: 1967,
-    },
-    {
-      id: 8,
-      title: "Sgt. Pepper's Lonely Hearts Club Band",
-      year: 1967,
-    },
-    {
-      id: 7,
-      title: 'Revolver',
-      year: 1966,
-    },
-    {
-      id: 6,
-      title: 'Rubber Soul',
-      year: 1965,
-    },
-    {
-      id: 5,
-      title: 'Help!',
-      year: 1965,
-    },
-    {
-      id: 4,
-      title: 'Beatles For Sale',
-      year: 1964,
-    },
-    {
-      id: 3,
-      title: "A Hard Day's Night",
-      year: 1964,
-    },
-    {
-      id: 2,
-      title: 'With The Beatles',
-      year: 1963,
-    },
-    {
-      id: 1,
-      title: 'Please Please Me',
-      year: 1963,
-    },
-  ];
 
   const lowerQuery = query.trim().toLowerCase();
   return allAlbums.filter(album => {
@@ -107,4 +110,13 @@ async function getSearchResults(query: string) {
       lowerTitle.indexOf(' ' + lowerQuery) !== -1
     );
   });
+}
+
+async function getAlbums() {
+  // Add a fake delay to make waiting noticeable.
+  await new Promise(resolve => {
+    setTimeout(resolve, 3000);
+  });
+
+  return allAlbums;
 }

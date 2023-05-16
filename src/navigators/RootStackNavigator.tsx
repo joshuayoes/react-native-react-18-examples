@@ -10,12 +10,14 @@ import {UseTransitionExampleScreen} from '../screens/UseTransitionExample';
 import {AutomaticBatchingExampleScreen} from '../screens/AutomaticBatchingExample';
 import {UseDeferredValueExampleScreen} from '../screens/UseDeferredValueExample';
 import {TableOfContentsScreen} from '../screens/TableOfContents';
+import {SuspenseExampleScreen} from '../screens/SuspenseExample';
 
 export type RootStackParamList = {
   UseTransitionExample: undefined;
   AutomaticBatchingExample: undefined;
   TableOfContentsScreen: undefined;
   UseDeferredValueExample: undefined;
+  SuspenseExample: undefined;
 };
 
 declare global {
@@ -45,6 +47,10 @@ export const RootStackScreens = {
     name: 'UseDeferredValueExample',
     component: UseDeferredValueExampleScreen,
   },
+  SuspenseExample: {
+    name: 'SuspenseExample',
+    component: SuspenseExampleScreen,
+  },
 } satisfies Record<
   keyof RootStackParamList,
   {
@@ -62,22 +68,13 @@ export function RootStackNavigator() {
     <RootStack.Navigator
       initialRouteName={RootStackScreens.TableOfContentsScreen.name}
       screenOptions={{title: 'React 18 Examples'}}>
-      <RootStack.Screen
-        name={RootStackScreens.TableOfContentsScreen.name}
-        component={RootStackScreens.TableOfContentsScreen.component}
-      />
-      <RootStack.Screen
-        name={RootStackScreens.UseTransitionExample.name}
-        component={RootStackScreens.UseTransitionExample.component}
-      />
-      <RootStack.Screen
-        name={RootStackScreens.AutomaticBatchingExample.name}
-        component={RootStackScreens.AutomaticBatchingExample.component}
-      />
-      <RootStack.Screen
-        name={RootStackScreens.UseDeferredValueExample.name}
-        component={RootStackScreens.UseDeferredValueExample.component}
-      />
+      {Object.values(RootStackScreens).map(screen => (
+        <RootStack.Screen
+          key={screen.name}
+          name={screen.name as any}
+          component={screen.component}
+        />
+      ))}
     </RootStack.Navigator>
   );
 }
