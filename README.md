@@ -14,7 +14,7 @@ This repo is currently under construction, here is the status of the examples th
 | `useSyncExternalStore` | 🚧     | https://react.dev/reference/react/useSyncExternalStore                      |
 | `startTransition`      | 🚧     | https://react.dev/reference/react/startTransition                           |
 | `useTransition`        | ✅     | https://react.dev/reference/react/useTransition                             |
-| `useDeferredValue`     | 🚧     | https://react.dev/reference/react/useDeferredValue                          |
+| `useDeferredValue`     | ✅     | https://react.dev/reference/react/useDeferredValue                          |
 | Full Suspense support  | 🚧     | https://react.dev/reference/react/Suspense                                  |
 
 | Emoji | Definition   |

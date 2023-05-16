@@ -8,12 +8,14 @@ import {
 
 import {UseTransitionExampleScreen} from '../screens/UseTransitionExample';
 import {AutomaticBatchingExampleScreen} from '../screens/AutomaticBatchingExample';
+import {UseDeferredValueExampleScreen} from '../screens/UseDeferredValueExample';
 import {TableOfContentsScreen} from '../screens/TableOfContents';
 
 export type RootStackParamList = {
   UseTransitionExample: undefined;
   AutomaticBatchingExample: undefined;
   TableOfContentsScreen: undefined;
+  UseDeferredValueExample: undefined;
 };
 
 declare global {
@@ -38,6 +40,10 @@ export const RootStackScreens = {
   TableOfContentsScreen: {
     name: 'TableOfContentsScreen',
     component: TableOfContentsScreen,
+  },
+  UseDeferredValueExample: {
+    name: 'UseDeferredValueExample',
+    component: UseDeferredValueExampleScreen,
   },
 } satisfies Record<
   keyof RootStackParamList,
@@ -67,6 +73,10 @@ export function RootStackNavigator() {
       <RootStack.Screen
         name={RootStackScreens.AutomaticBatchingExample.name}
         component={RootStackScreens.AutomaticBatchingExample.component}
+      />
+      <RootStack.Screen
+        name={RootStackScreens.UseDeferredValueExample.name}
+        component={RootStackScreens.UseDeferredValueExample.component}
       />
     </RootStack.Navigator>
   );
