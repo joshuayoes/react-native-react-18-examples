@@ -2,16 +2,22 @@
 // the framework that you use together with Suspense.
 // Normally, the caching logic would be inside a framework.
 
-let cache = new Map();
+interface Album {
+  id: number;
+  title: string;
+  year: number;
+}
 
-export function fetchData(url) {
+let cache = new Map<string, Promise<Album[]>>();
+
+export async function fetchData(url: string) {
   if (!cache.has(url)) {
     cache.set(url, getData(url));
   }
-  return cache.get(url);
+  return cache.get(url) ?? ([] as Album[]);
 }
 
-async function getData(url) {
+async function getData(url: string) {
   if (url.startsWith('/search?q=')) {
     return await getSearchResults(url.slice('/search?q='.length));
   } else {
@@ -19,13 +25,13 @@ async function getData(url) {
   }
 }
 
-async function getSearchResults(query) {
+async function getSearchResults(query: string) {
   // Add a fake delay to make waiting noticeable.
   await new Promise(resolve => {
     setTimeout(resolve, 500);
   });
 
-  const allAlbums = [
+  const allAlbums: Album[] = [
     {
       id: 13,
       title: 'Let It Be',
