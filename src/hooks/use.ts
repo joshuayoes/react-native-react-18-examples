@@ -1,5 +1,6 @@
-// This is a workaround for a bug to get the demo running.
-// TODO: replace with real implementation when the bug is fixed.
+/**
+ * This is a sample implementation of how the future `use` hook will be implemented
+ */
 export function use<T>(_promise: Promise<T>): T {
   const promise = _promise as Promise<T> & {
     status: string;

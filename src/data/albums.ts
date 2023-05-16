@@ -10,11 +10,11 @@ export interface Album {
 
 let cache = new Map<string, Promise<Album[]>>();
 
-export async function fetchData(url: string) {
+export function fetchData(url: string) {
   if (!cache.has(url)) {
     cache.set(url, getData(url));
   }
-  return cache.get(url) ?? ([] as Album[]);
+  return cache.get(url)!;
 }
 
 async function getData(url: string) {
