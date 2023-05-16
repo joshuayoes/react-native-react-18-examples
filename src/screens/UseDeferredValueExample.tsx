@@ -1,6 +1,7 @@
 import React from 'react';
 import {Text, TextInput, TextStyle, View, ViewStyle} from 'react-native';
 import {fetchData} from '../data/albums';
+import {use} from '../hooks/use';
 
 /**
  * @see https://react.dev/reference/react/useDeferredValue#usage
@@ -69,34 +70,4 @@ export default function SearchResults({query}: {query: string}) {
       ))}
     </View>
   );
-}
-
-// This is a workaround for a bug to get the demo running.
-// TODO: replace with real implementation when the bug is fixed.
-function use<T>(_promise: Promise<T>): T {
-  const promise = _promise as Promise<T> & {
-    status: string;
-    value: T;
-    reason?: any;
-  };
-  if (promise.status === 'fulfilled') {
-    return promise.value;
-  } else if (promise.status === 'rejected') {
-    throw promise.reason;
-  } else if (promise.status === 'pending') {
-    throw promise;
-  } else {
-    promise.status = 'pending';
-    promise.then(
-      result => {
-        promise.status = 'fulfilled';
-        promise.value = result;
-      },
-      reason => {
-        promise.status = 'rejected';
-        promise.reason = reason;
-      },
-    );
-    throw promise;
-  }
 }
