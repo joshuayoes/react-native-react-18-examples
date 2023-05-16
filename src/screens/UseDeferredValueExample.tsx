@@ -45,7 +45,7 @@ const $loading: TextStyle = {
   fontWeight: 'bold',
   fontSize: 20,
 };
-export default function SearchResults({query}) {
+export default function SearchResults({query}: {query: string}) {
   if (query === '') {
     return null;
   }
@@ -54,7 +54,7 @@ export default function SearchResults({query}) {
     return (
       <View>
         <Text>
-          No matches for <Text style={{fontStyle: 'italic'}}>{query}</Text>
+          No matches for <Text>{query}</Text>
         </Text>
       </View>
     );
@@ -73,7 +73,12 @@ export default function SearchResults({query}) {
 
 // This is a workaround for a bug to get the demo running.
 // TODO: replace with real implementation when the bug is fixed.
-function use(promise) {
+function use<T>(_promise: Promise<T>): T {
+  const promise = _promise as Promise<T> & {
+    status: string;
+    value: T;
+    reason?: any;
+  };
   if (promise.status === 'fulfilled') {
     return promise.value;
   } else if (promise.status === 'rejected') {
