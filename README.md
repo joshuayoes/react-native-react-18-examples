@@ -2,6 +2,10 @@
 
 This repository implements examples of React 18 from the new [react.dev](https://react.dev/) in React Native.
 
+## ⚠️ Warning ⚠️
+
+This repo works on iOS but not Android. This repo uses the latest `react-native@0.72.0-rc.3` release, which does not have concurrent render support for Android. See this [discussion for more details](https://github.com/reactwg/react-native-new-architecture/discussions/94#discussioncomment-5880785).
+
 ## Road Map
 
 This repo is currently under construction, here is the status of the examples that should be implemented:
