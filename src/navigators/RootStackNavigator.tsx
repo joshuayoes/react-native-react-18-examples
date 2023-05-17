@@ -35,32 +35,39 @@ export type RootStackProps<
 export const RootStackScreens = {
   UseTransitionExample: {
     name: 'UseTransitionExample',
+    title: 'useTransition example',
     component: UseTransitionExampleScreen,
   },
   AutomaticBatchingExample: {
     name: 'AutomaticBatchingExample',
+    title: 'Automatic Batching example',
     component: AutomaticBatchingExampleScreen,
   },
   TableOfContentsScreen: {
     name: 'TableOfContentsScreen',
+    title: 'React 18 Examples',
     component: TableOfContentsScreen,
   },
   UseDeferredValueExample: {
     name: 'UseDeferredValueExample',
+    title: 'useDeferredValue example',
     component: UseDeferredValueExampleScreen,
   },
   SuspenseExample: {
     name: 'SuspenseExample',
+    title: 'Suspense example',
     component: SuspenseExampleScreen,
   },
   UseSyncExternalStoreExample: {
     name: 'UseSyncExternalStoreExample',
+    title: 'useSyncExternalStore example',
     component: UseSyncExternalStoreExampleScreen,
   },
 } satisfies Record<
   keyof RootStackParamList,
   {
     name: keyof RootStackParamList;
+    title: string;
     component: React.FC<any>;
   }
 >;
@@ -72,13 +79,13 @@ export const rootStackRef = createNavigationContainerRef<RootStackParamList>();
 export function RootStackNavigator() {
   return (
     <RootStack.Navigator
-      initialRouteName={RootStackScreens.TableOfContentsScreen.name}
-      screenOptions={{title: 'React 18 Examples'}}>
+      initialRouteName={RootStackScreens.TableOfContentsScreen.name}>
       {Object.values(RootStackScreens).map(screen => (
         <RootStack.Screen
           key={screen.name}
           name={screen.name as any}
           component={screen.component}
+          options={{title: screen.title}}
         />
       ))}
     </RootStack.Navigator>

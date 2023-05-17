@@ -16,8 +16,8 @@ export function TableOfContentsScreen(props: Props) {
       {screens.map(screen => (
         <Button
           key={screen.name}
-          title={screen.name}
-          accessibilityLabel={`Navigate to ${screen.name}`}
+          title={screen.title}
+          accessibilityLabel={`Navigate to ${screen.title}`}
           onPress={() => {
             props.navigation.navigate(screen.name);
           }}
