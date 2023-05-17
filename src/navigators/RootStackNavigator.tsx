@@ -11,6 +11,7 @@ import {AutomaticBatchingExampleScreen} from '../screens/AutomaticBatchingExampl
 import {UseDeferredValueExampleScreen} from '../screens/UseDeferredValueExample';
 import {TableOfContentsScreen} from '../screens/TableOfContents';
 import {SuspenseExampleScreen} from '../screens/SuspenseExample';
+import {UseSyncExternalStoreExampleScreen} from '../screens/UseSyncExternalStoreExample';
 
 export type RootStackParamList = {
   UseTransitionExample: undefined;
@@ -18,6 +19,7 @@ export type RootStackParamList = {
   TableOfContentsScreen: undefined;
   UseDeferredValueExample: undefined;
   SuspenseExample: undefined;
+  UseSyncExternalStoreExample: undefined;
 };
 
 declare global {
@@ -50,6 +52,10 @@ export const RootStackScreens = {
   SuspenseExample: {
     name: 'SuspenseExample',
     component: SuspenseExampleScreen,
+  },
+  UseSyncExternalStoreExample: {
+    name: 'UseSyncExternalStoreExample',
+    component: UseSyncExternalStoreExampleScreen,
   },
 } satisfies Record<
   keyof RootStackParamList,
