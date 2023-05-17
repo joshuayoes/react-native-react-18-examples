@@ -33,12 +33,12 @@ This repo is currently under construction, here is the status of the examples th
 | ---------------------- | ------ | --------------------------------------------------------------------------- |
 | Automatic batching     | ✅     | https://react.dev/blog/2022/03/08/react-18-upgrade-guide#automatic-batching |
 | Strict Mode            | 🚧     | https://react.dev/reference/react/StrictMode                                |
+| Full Suspense support  | ✅     | https://react.dev/reference/react/Suspense                                  |
+| `useTransition`        | ✅     | https://react.dev/reference/react/useTransition                             |
+| `startTransition`      | 🚧     | https://react.dev/reference/react/startTransition                           |
+| `useDeferredValue`     | ✅     | https://react.dev/reference/react/useDeferredValue                          |
 | `useId`                | 🚧     | https://react.dev/reference/react/useId                                     |
 | `useSyncExternalStore` | ✅     | https://react.dev/reference/react/useSyncExternalStore                      |
-| `startTransition`      | 🚧     | https://react.dev/reference/react/startTransition                           |
-| `useTransition`        | ✅     | https://react.dev/reference/react/useTransition                             |
-| `useDeferredValue`     | ✅     | https://react.dev/reference/react/useDeferredValue                          |
-| Full Suspense support  | ✅     | https://react.dev/reference/react/Suspense                                  |
 
 | Emoji | Definition   |
 | ----- | ------------ |
