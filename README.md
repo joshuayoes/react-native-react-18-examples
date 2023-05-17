@@ -8,6 +8,8 @@ This repository implements examples of React 18 from the new [react.dev](https:/
 yarn
 ```
 
+`yarn` or `yarn install` will run a post-install script to setup your CocoaPods for iOS.
+
 ## iOS ✅
 
 ```bash
