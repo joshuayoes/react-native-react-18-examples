@@ -8,18 +8,20 @@ This repository implements examples of React 18 from the new [react.dev](https:/
 yarn
 ```
 
-## iOS
+## iOS ✅
 
 ```bash
 yarn ios
 ```
 
-## Android
+## Android ⚠️
 
-⚠️ Android is not functional on the latest `react-native@0.72.0-rc.3` release:
+Android is not functional on the latest `react-native@0.72.0-rc.3` release:
 
 - concurrent render support is currently not functional for Android. See this [discussion for more details](https://github.com/reactwg/react-native-new-architecture/discussions/94#discussioncomment-5880785).
 - `react-native-screens` and `@react-navigation/native` depends on certain Java libraries from React Native that have been deprecated.
+
+However, you can still attempt with the following command:
 
 ```bash
 yarn android
