@@ -15,13 +15,13 @@ import {UseSyncExternalStoreExampleScreen} from '../screens/UseSyncExternalStore
 import {StrictModeExampleScreen} from '../screens/StrictModeExample';
 
 export type RootStackParamList = {
-  UseTransitionExample: undefined;
   AutomaticBatchingExample: undefined;
+  StrictModeExample: undefined;
+  SuspenseExample: undefined;
   TableOfContentsScreen: undefined;
   UseDeferredValueExample: undefined;
-  SuspenseExample: undefined;
   UseSyncExternalStoreExample: undefined;
-  StrictModeExample: undefined;
+  UseTransitionExample: undefined;
 };
 
 declare global {
