@@ -871,21 +871,21 @@ PODS:
   - React-jsinspector (0.72.0-rc.4)
   - React-logger (0.72.0-rc.4):
     - glog
-  - react-native-safe-area-context (4.5.2):
+  - react-native-safe-area-context (4.5.3):
     - RCT-Folly
     - RCTRequired
     - RCTTypeSafety
     - React-Core
-    - react-native-safe-area-context/common (= 4.5.2)
-    - react-native-safe-area-context/fabric (= 4.5.2)
+    - react-native-safe-area-context/common (= 4.5.3)
+    - react-native-safe-area-context/fabric (= 4.5.3)
     - ReactCommon/turbomodule/core
-  - react-native-safe-area-context/common (4.5.2):
+  - react-native-safe-area-context/common (4.5.3):
     - RCT-Folly
     - RCTRequired
     - RCTTypeSafety
     - React-Core
     - ReactCommon/turbomodule/core
-  - react-native-safe-area-context/fabric (4.5.2):
+  - react-native-safe-area-context/fabric (4.5.3):
     - RCT-Folly
     - RCTRequired
     - RCTTypeSafety
@@ -1212,7 +1212,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 4ed0b3fdab10c473851bb3c440ac7def5501241b
   React-jsinspector: 2fafb42c7e572f35ca760b8af584f807e7b2f98a
   React-logger: 56348c1a33aa0070b95e46eba39cb270a3619bc4
-  react-native-safe-area-context: 8888b05e4908d768745251fcbb767a521f9522d3
+  react-native-safe-area-context: dc3a6849aadda66f7573c0f1fad5bde757b94999
   React-NativeModulesApple: bc28dab2c4b0e932cc86a61bbfe0f4232ab6d5c2
   React-perflogger: 20c36d9db5e28cc7183f35180aa7c9e03aa8ad29
   React-RCTActionSheet: fe3c102ca78410d1b4710e94a856df8bcb84e1c1
