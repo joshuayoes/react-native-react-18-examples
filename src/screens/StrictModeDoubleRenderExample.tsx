@@ -8,7 +8,7 @@ const initialStories = [
 ] satisfies Story[];
 
 /** @see https://react.dev/reference/react/StrictMode */
-export function StrictModeExampleScreen() {
+export function StrictModeDoubleRenderExampleScreen() {
   let [stories] = React.useState(initialStories);
   return (
     <React.StrictMode>

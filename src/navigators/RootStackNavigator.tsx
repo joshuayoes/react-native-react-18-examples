@@ -12,12 +12,12 @@ import {UseDeferredValueExampleScreen} from '../screens/UseDeferredValueExample'
 import {TableOfContentsScreen} from '../screens/TableOfContents';
 import {SuspenseExampleScreen} from '../screens/SuspenseExample';
 import {UseSyncExternalStoreExampleScreen} from '../screens/UseSyncExternalStoreExample';
-import {StrictModeExampleScreen} from '../screens/StrictModeExample';
+import {StrictModeDoubleRenderExampleScreen} from '../screens/StrictModeDoubleRenderExample';
 import {UseIdExampleScreen} from '../screens/UseIdExample';
 
 export type RootStackParamList = {
   AutomaticBatchingExample: undefined;
-  StrictModeExample: undefined;
+  StrictModeDoubleRenderExample: undefined;
   SuspenseExample: undefined;
   TableOfContentsScreen: undefined;
   UseDeferredValueExample: undefined;
@@ -67,10 +67,10 @@ export const RootStackScreens = {
     title: 'useSyncExternalStore example',
     component: UseSyncExternalStoreExampleScreen,
   },
-  StrictModeExample: {
-    name: 'StrictModeExample',
-    title: 'Strict Mode example',
-    component: StrictModeExampleScreen,
+  StrictModeDoubleRenderExample: {
+    name: 'StrictModeDoubleRenderExample',
+    title: 'Strict Mode double render example',
+    component: StrictModeDoubleRenderExampleScreen,
   },
   UseIdExample: {
     name: 'UseIdExample',
