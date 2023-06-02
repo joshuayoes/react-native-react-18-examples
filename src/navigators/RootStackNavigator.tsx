@@ -12,6 +12,7 @@ import {UseDeferredValueExampleScreen} from '../screens/UseDeferredValueExample'
 import {TableOfContentsScreen} from '../screens/TableOfContents';
 import {SuspenseExampleScreen} from '../screens/SuspenseExample';
 import {UseSyncExternalStoreExampleScreen} from '../screens/UseSyncExternalStoreExample';
+import {StrictModeExampleScreen} from '../screens/StrictModeExample';
 
 export type RootStackParamList = {
   UseTransitionExample: undefined;
@@ -20,6 +21,7 @@ export type RootStackParamList = {
   UseDeferredValueExample: undefined;
   SuspenseExample: undefined;
   UseSyncExternalStoreExample: undefined;
+  StrictModeExample: undefined;
 };
 
 declare global {
@@ -33,15 +35,15 @@ export type RootStackProps<
 > = NativeStackScreenProps<RootStackParamList, Screen>;
 
 export const RootStackScreens = {
-  UseTransitionExample: {
-    name: 'UseTransitionExample',
-    title: 'useTransition example',
-    component: UseTransitionExampleScreen,
-  },
   AutomaticBatchingExample: {
     name: 'AutomaticBatchingExample',
     title: 'Automatic Batching example',
     component: AutomaticBatchingExampleScreen,
+  },
+  UseTransitionExample: {
+    name: 'UseTransitionExample',
+    title: 'useTransition example',
+    component: UseTransitionExampleScreen,
   },
   TableOfContentsScreen: {
     name: 'TableOfContentsScreen',
@@ -62,6 +64,11 @@ export const RootStackScreens = {
     name: 'UseSyncExternalStoreExample',
     title: 'useSyncExternalStore example',
     component: UseSyncExternalStoreExampleScreen,
+  },
+  StrictModeExample: {
+    name: 'StrictModeExample',
+    title: 'Strict Mode example',
+    component: StrictModeExampleScreen,
   },
 } satisfies Record<
   keyof RootStackParamList,
