@@ -41,7 +41,7 @@ This repo is currently under construction, here is the status of the examples th
 | `useTransition`        | ✅     | https://react.dev/reference/react/useTransition                             |
 | `startTransition`      | 🚧     | https://react.dev/reference/react/startTransition                           |
 | `useDeferredValue`     | ✅     | https://react.dev/reference/react/useDeferredValue                          |
-| `useId`                | 🚧     | https://react.dev/reference/react/useId                                     |
+| `useId`                | ✅     | https://react.dev/reference/react/useId                                     |
 | `useSyncExternalStore` | ✅     | https://react.dev/reference/react/useSyncExternalStore                      |
 
 | Emoji | Definition     |
