@@ -7,9 +7,9 @@ import {RootStackScreens} from '../navigators/RootStackNavigator';
 type Props = RootStackProps<'TableOfContentsScreen'>;
 
 export function TableOfContentsScreen(props: Props) {
-  const screens = Object.values(RootStackScreens).filter(
-    screen => screen.name !== 'TableOfContentsScreen',
-  );
+  const screens = Object.values(RootStackScreens)
+    .filter(screen => screen.name !== 'TableOfContentsScreen')
+    .sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <View style={styles.root}>
