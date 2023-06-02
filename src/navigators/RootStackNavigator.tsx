@@ -14,6 +14,7 @@ import {SuspenseExampleScreen} from '../screens/SuspenseExample';
 import {UseSyncExternalStoreExampleScreen} from '../screens/UseSyncExternalStoreExample';
 import {StrictModeDoubleRenderExampleScreen} from '../screens/StrictModeDoubleRenderExample';
 import {UseIdExampleScreen} from '../screens/UseIdExample';
+import {StrictModeDoubleUseEffectExampleScreen} from '../screens/StrictModeDoubleUseEffectExample';
 
 export type RootStackParamList = {
   AutomaticBatchingExample: undefined;
@@ -24,6 +25,7 @@ export type RootStackParamList = {
   UseSyncExternalStoreExample: undefined;
   UseTransitionExample: undefined;
   UseIdExample: undefined;
+  StrictModeDoubleUseEffectExample: undefined;
 };
 
 declare global {
@@ -76,6 +78,11 @@ export const RootStackScreens = {
     name: 'UseIdExample',
     title: 'useId example',
     component: UseIdExampleScreen,
+  },
+  StrictModeDoubleUseEffectExample: {
+    name: 'StrictModeDoubleUseEffectExample',
+    title: 'Strict Mode double useEffect example',
+    component: StrictModeDoubleUseEffectExampleScreen,
   },
 } satisfies Record<
   keyof RootStackParamList,
